@@ -1,6 +1,6 @@
 ﻿$cred=Get-Credential -Message " Podaj dane do Keja" -UserName keja\administrator
 
-$comp=Get-VM mg-2022-sv* | Where-Object state -eq "Running"
+$comp=Get-VM mg-2022-sv* #| Where-Object state -eq "Running"
 
 foreach($kompvirt in $comp) {
     $k=$kompvirt.VMName
