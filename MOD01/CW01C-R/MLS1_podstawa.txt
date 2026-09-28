@@ -5,7 +5,7 @@ no ip domain-lookup
 username admin privilege 15 secret Admin#2026
 enable secret Klasa#2026
 service password-encryption
-!
+! 
 line console 0
  login local
  logging synchronous
