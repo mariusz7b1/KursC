@@ -1,0 +1,19 @@
+enable
+configure terminal
+ip dhcp excluded-address 192.168.10.1 192.168.10.50
+ip dhcp excluded-address 192.168.10.200 192.168.10.254
+ip dhcp excluded-address 192.168.20.1 192.168.20.50
+ip dhcp excluded-address 192.168.20.200 192.168.20.254
+!
+ip dhcp pool VLAN10_KADRY
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.254
+ dns-server 8.8.8.8
+ domain-name krzak.pl
+exit
+ip dhcp pool VLAN20_IT
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.254
+ dns-server 8.8.8.8
+ domain-name krzak.pl
+exit

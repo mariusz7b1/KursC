@@ -1,7 +1,10 @@
 
 (AI)Routing 			https://youtu.be/J36SpJBCyqI
-(AI)DHCP i DAI 			https://youtu.be/8YinDFdUyxo
 
+--poniżesz pokrywają się materiałem w pewnym zakresie
+(AI)Ochrona sieci		https://youtu.be/-VExoX7d_7Y
+(AI)DHCP i DAI 			https://youtu.be/8YinDFdUyxo
+------------------------------------------------------------------
 
 
 DHCP ogólnie	https://youtu.be/LFwGd5MzEUE
