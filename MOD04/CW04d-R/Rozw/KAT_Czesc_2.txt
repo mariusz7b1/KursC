@@ -1,0 +1,19 @@
+! ==================================================================
+! cw04d – KAT – Czesc_2
+! zrodlo: cw04d_klucz.docx
+!         rozdzial: 1. Rozwiązania części i zadań / Część 2
+!         blok: KAT – Część 2
+! wygenerowano: 2026-09-29
+! ==================================================================
+
+enable
+configure terminal
+no access-list 111
+access-list 111 permit tcp 172.16.14.0 0.0.1.255 any eq 80
+access-list 111 permit tcp 172.16.14.0 0.0.1.255 any eq 443
+access-list 111 permit tcp 172.16.14.0 0.0.1.255 any eq 22
+access-list 111 deny ip any any
+interface GigabitEthernet0/0
+ ip access-group 111 in
+end
+write memory

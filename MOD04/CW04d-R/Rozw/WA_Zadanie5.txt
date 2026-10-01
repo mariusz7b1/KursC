@@ -1,0 +1,15 @@
+! ==================================================================
+! cw04d – WA – Zadanie5
+! zrodlo: cw04d_klucz.docx
+!         rozdzial: 1. Rozwiązania części i zadań / Zadanie 5 – edycja INTERNET_OUT
+!         blok: WA – Zadanie 5
+! wygenerowano: 2026-09-29
+! ==================================================================
+
+enable
+configure terminal
+ip access-list extended INTERNET_OUT
+ 5 deny tcp 172.16.14.0 0.0.1.255 any eq 80
+ 6 deny tcp 172.16.14.0 0.0.1.255 any eq 443
+end
+write memory

@@ -1,0 +1,19 @@
+! ==================================================================
+! cw04d – KAT – Zadanie3
+! zrodlo: cw04d_klucz.docx
+!         rozdzial: 1. Rozwiązania części i zadań / Zadanie 3 – access-class na liniach VTY
+!         blok: KAT – Zadanie 3
+! wygenerowano: 2026-09-29
+! ==================================================================
+
+enable
+configure terminal
+username admin secret Admin#2026
+no access-list 20
+access-list 20 permit 172.16.12.0 0.0.1.255
+line vty 0 4
+ login local
+ transport input telnet
+ access-class 20 in
+end
+write memory

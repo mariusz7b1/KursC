@@ -1,0 +1,21 @@
+! ==================================================================
+! cw04d – KAT – Czesc_3
+! zrodlo: cw04d_klucz.docx
+!         rozdzial: 1. Rozwiązania części i zadań / Część 3
+!         blok: KAT – Część 3
+! wygenerowano: 2026-09-29
+! ==================================================================
+
+enable
+configure terminal
+interface GigabitEthernet0/0
+ no ip access-group 111 in
+exit
+no access-list 111
+no access-list 112
+access-list 112 permit ip 172.16.12.0 0.0.1.255 172.16.14.0 0.0.1.255
+access-list 112 deny ip any any
+interface GigabitEthernet0/0
+ ip access-group 112 out
+end
+write memory

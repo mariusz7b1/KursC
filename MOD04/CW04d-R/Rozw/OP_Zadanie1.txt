@@ -1,0 +1,16 @@
+! ==================================================================
+! cw04d – OP – Zadanie1
+! zrodlo: cw04d_klucz.docx
+!         rozdzial: 1. Rozwiązania części i zadań / Zadanie 1 – lista standardowa blisko celu
+!         blok: OP – Zadanie 1
+! wygenerowano: 2026-09-29
+! ==================================================================
+
+enable
+configure terminal
+no access-list 10
+access-list 10 permit 172.16.8.0 0.0.3.255
+interface GigabitEthernet0/0
+ ip access-group 10 out
+end
+write memory

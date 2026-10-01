@@ -1,0 +1,21 @@
+! ==================================================================
+! cw04d – WA – Zadanie2
+! zrodlo: cw04d_klucz.docx
+!         rozdzial: 1. Rozwiązania części i zadań / Zadanie 2 – INTERNET_OUT
+!         blok: WA – Zadanie 2
+! wygenerowano: 2026-09-29
+! ==================================================================
+
+enable
+configure terminal
+no ip access-list extended INTERNET_OUT
+ip access-list extended INTERNET_OUT
+ permit tcp 172.16.0.0 0.0.255.255 any eq 80
+ permit tcp 172.16.0.0 0.0.255.255 any eq 443
+ permit icmp 172.16.0.0 0.0.255.255 any echo
+ deny ip any any
+exit
+interface GigabitEthernet0/1
+ ip access-group INTERNET_OUT out
+end
+write memory
