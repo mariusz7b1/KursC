@@ -1,4 +1,0 @@
-line/vty
-	user admin cisco1
-enable
-	cisco2
